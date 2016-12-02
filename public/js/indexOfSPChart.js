@@ -15,7 +15,7 @@ IndexOfSPChart.prototype.init = function()
     //Gets access to the div element created for this chart from HTML
     self.svgBoundsL = divyearChart.node().getBoundingClientRect();
     self.svgWidthL = self.svgBoundsL.width - self.margin.left - self.margin.right;
-    self.svgHeight = 300;
+    self.svgHeight = 280;
 
     self.svg = divyearChart.append('svg')
         // .attr('width', self.svgWidth +  self.margin.left + self.margin.right)
