@@ -1,0 +1,62 @@
+.fullView{
+    display: inline-block;
+    width: 100%;
+}
+
+h2{
+    -webkit-margin-before: 5px;
+    -webkit-margin-after:  5px;
+}
+
+h3{
+    text-anchor: middle;
+    font-size: 32px;
+}
+
+path {
+    fill: none;
+}
+
+.indexOfSP {
+    fill: blue;
+}
+
+#plot-selector-0 {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#plot-selector-1 {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+
+#chart-type-selector {
+    display: inline-block;
+}
+
+.focus circle {
+    fill: red;
+    stroke: red;
+}
+
+.price line {
+    fill: none;
+    stroke: steelblue;
+}
+
+.contentL {
+    float: left;
+    width: 70%
+}
+
+.contentR {
+    float: right;
+    width: 30%
+}
+
+.barText{
+    font-size: 12px;
+    font-family: "Helvetaica" , "Arial" ,sans-serif;
+}

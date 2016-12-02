@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CS 6630 Visualization Project</title>
+    <link rel="stylesheet" href="public/css/style.css"/>
+    <script type="text/javascript" src="bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="bower_components/d3-tip/index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+<h1>Stock Data Visualization</h1>
+<ul class="info">
+    <li>Name: Jian Lan; E-Mail: jiann.lan@cosmic.utah.edu; UID: u0752670</li>
+    <li>Name: Jie Ma; E-Mail: ma@math.utah.edu; UID: u0748120</li>
+</ul>
+<div id="index-of-SP500-chart" class="view">
+</div>
+
+
+<div>
+    <div id = "two-stocks">
+        <div id="comparison-chart" class="view">
+            <div id="selectors">
+                <div id="plot-selector-0">
+                    <label>Ticker-1 (blue):</label>
+                    <select id="dataset-0"></select>
+                </div>
+
+                <div id="plot-selector-1">
+                    <label>Ticker-2 (red):</label>
+                    <select id="dataset-1"></select>
+                </div>
+
+                <div id="chart-type-selector">
+                    <label>Chart Type:</label>
+                    <select id="types">
+                        <option selected value="lines">lines</option>
+                        <option value="separate">separate</option>
+                        <option value="normalized">normalized</option>
+                    </select>
+                </div>
+            </div>
+            <svg width="500" height="800" id="stock-prices">
+            </svg>
+        </div>
+    </div>
+
+
+    <div id="statementsDiv">
+        <div id="labelsSelector">
+            <label>Financial  Labels</label>
+            <!--<select id="statementsSelect" onchange="labelSelection()">-->
+            <select id="statementsSelect">
+                <option  selected  value="CASH_RATIO">Cash Ratio</option>
+                <option value="CUR_RATIO">Current Ratio</option>
+                <option value="QUICK_RATIO">Quick Ratio</option>
+                <option value="GROSS_MARGIN">Growth Margin</option>
+                <option value="SALES_GROWTH">Sales Growth</option>
+                <option value="OPER_INC_TO_CUR_LIAB">Operation Income/Current Debt</option>
+                <option value="TOT_DEBT_TO_EBITDA">Total Debt/EBITDA</option>
+                <option value="TOT_DEBT_TO_TOT_ASSET">Total Debt/Asset</option>
+                <option value="TOT_DEBT_TO_COM_EQY">Total Debt/Equity</option>
+                <option value="ACCT_RCV_DAYS">Receivable Days</option>
+                <option value="EFF_TAX_RATE">Effective Tax Rate</option>
+
+
+            </select>
+        </div>
+        <svg width="600" height="450" id="statementsSvg">
+        </svg>
+    </div>
+</div>
+
+<script type="application/javascript" src="public/js/singleStockPriceChart.js"></script>
+<script type="application/javascript" src="public/js/indexOfSPChart.js"></script>
+<script type="application/javascript" src="public/js/main.js"></script>
+</body>
+</html>
