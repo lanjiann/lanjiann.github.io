@@ -85,7 +85,7 @@ SingleStockPricesChart.prototype.init = function()
     self.y1 = self.svgContentL.select('#y1');
 
     // IV. Initial View!
-    self.updatePrices('aapl', 'goog', 'lines');
+    self.updatePrices('aapl', 'goog', 'Single Lines Chart');
     self.updateFinantialStatements('aapl', 'goog', 'CASH_RATIO');
 };
 
@@ -95,7 +95,7 @@ SingleStockPricesChart.prototype.init = function()
  *
  // * @param ticker0
  // * @param ticker1
- // * @param chartType: this can be "lines", "separate", "normalized"
+ // * @param chartType: this can be "Single Line Charts", "Separate Lines Chart", "Single Line Charts (Normalized)"
  */
 SingleStockPricesChart.prototype.updatePrices = function(ticker0, ticker1, chartType)
 {
@@ -130,7 +130,7 @@ SingleStockPricesChart.prototype.updatePrices = function(ticker0, ticker1, chart
             var xExt0 = d3.extent(dailyStockPrice0, function(d) { return d.Date; });
             var xExt1 = d3.extent(dailyStockPrice1, function(d) { return d.Date; });
 
-            if (chartType === 'lines') {
+            if (chartType === 'Single Lines Chart') {
                 x0 = d3.scaleTime().range([0, self.svgWidthL]);
                 y0 = d3.scaleLinear().range([self.svgHeight, 0]);
 
@@ -183,7 +183,7 @@ SingleStockPricesChart.prototype.updatePrices = function(ticker0, ticker1, chart
                         return date >= xLowerBound && date <= xUpperBound;
                     }))
                 });
-            } else if ( chartType == 'separate') {
+            } else if ( chartType == 'Separate Line Charts') {
                 function oneLine0(gid, data, x, y) {
                     // xExt0 = d3.extent(dailyStockPrice0, function(d) { return d.Date; });
                     // xExt1 = d3.extent(dailyStockPrice1, function(d) { return d.Date; });
@@ -249,7 +249,7 @@ SingleStockPricesChart.prototype.updatePrices = function(ticker0, ticker1, chart
                         return date >= xLowerBoundPrime && date <= xUpperBoundPrime;
                     }))
                 });
-            } else if ( chartType == 'normalized') {
+            } else if ( chartType == 'Single Lines Chart (Normalized)') {
                 function oneLine1(gid, data, x, y) {
                     xAxis = d3.axisBottom(x).tickSizeOuter(0).ticks(10);
                     var valueLine = self.pathGenGen(x, y);
