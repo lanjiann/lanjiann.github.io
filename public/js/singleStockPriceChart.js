@@ -22,7 +22,7 @@ SingleStockPricesChart.prototype.init = function()
 
     // II. Layout related
     self.margin = {top: 15, right: 100, bottom: 20, left: 50};
-    self.svgHeight = 420;
+    self.svgHeight = 300;
 
     //// 1. Left div
     var stockPricesDiv = d3.select('#two-stocks').classed('contentL', true);
